@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "portal",
-    "slug": "portal",
+    "slug": "portal-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2647b8a1-941a-423d-b559-f6acaf8f4376"
+      }
+    },
+    "owner": "rayyan3"
   }
 }
