@@ -13,7 +13,7 @@ at the project root.
 
 Once that finishes, spin up a container with:
 ```
-docker run -it -p 4000:4000 -v $PWD/portal:/root/portal portal:latest /bin/bash
+docker run -it -p 4000:4000 -p 19006:19006 -v $PWD/portal:/root/portal portal:latest /bin/bash
 ```
 
 You can alias these commands for easier usage.
@@ -22,8 +22,10 @@ Once inside the container, `cd portal/`. This contains the app code.
 
 You can get the web app dev server going with:
 ```
-yarn web
+yarn web -p 4000
 ```
+
+And then navigate to http://localhost:19006 in your browser.
 
 You can get the ios app dev server going with:
 ```
@@ -33,3 +35,6 @@ yarn ios
 ---
 #### References
 [Expo Docs](https://docs.expo.dev/tutorial/introduction/)
+[TailwindCSS Docs](https://tailwindcss.com/docs/installation)
+[NativeWind Docs](https://www.nativewind.dev/)
+[Fastlane](https://fastlane.tools/)
