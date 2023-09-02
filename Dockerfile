@@ -30,3 +30,5 @@ ENV PATH $PATH:$NODE_DIR/node-v$NODE_VERSION-linux-x64/bin
 RUN corepack enable
 
 WORKDIR /root
+
+EXPOSE 19006

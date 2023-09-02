@@ -13,7 +13,7 @@ at the project root.
 
 Once that finishes, spin up a container with:
 ```
-docker run -it -p 4000:4000 -p 19006:19006 -v $PWD/portal:/root/portal portal:latest /bin/bash
+docker run -it -P -p 19006:19006 -v $PWD/portal:/root/portal portal:latest /bin/bash
 ```
 
 You can alias these commands for easier usage.
@@ -22,15 +22,17 @@ Once inside the container, `cd portal/`. This contains the app code.
 
 You can get the web app dev server going with:
 ```
-yarn web -p 4000
+yarn web
 ```
 
 And then navigate to http://localhost:19006 in your browser.
 
-You can get the ios app dev server going with:
+You can get the ios app dev server going with (see note below):
 ```
 yarn ios
 ```
+
+***NOTE:*** You will need to install Xcode on your mac. _You cannot build the ios app in the docker container, but rather must run on your mac. This is because the docker container is a Linux OS. When doing this, make sure your node version matches that of the docker image! This cannot be stressed enough and will save you headaches in debugging (tip: use [`nvm`](https://github.com/nvm-sh/nvm))._
 
 ---
 #### References
