@@ -15,6 +15,7 @@ RUN apt-get upgrade -y
 # Install base dependencies
 RUN apt-get install -y -q --no-install-recommends \
     ca-certificates \
+    vim-tiny \
     curl \
     watchman
 
